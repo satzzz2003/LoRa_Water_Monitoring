@@ -2,7 +2,7 @@
 
 A low-power, long-range **LoRa-based water level and quality monitoring system** for smart cities, gated communities, and rural households. Each water tank is fitted with an ESP32 node that reads water level (ultrasonic sensor) and water quality (TDS sensor), then transmits the data over a 433 MHz LoRa link to a central receiver, which pushes it to the cloud (ThingSpeak) for real-time visualization and control via a mobile app (Blynk).
 
-> Based on the research paper: *"LoRa Powered Water Management System for Real Time Monitoring and Control in Smart Cities"* — B. Padmavathi, L. Sathya, G.K. Sathya Narayanan, B. Sanjana, Ashiq Rasool, Dept. of ECE, SRM Institute of Science and Technology, Ramapuram Campus, Chennai.
+
 
 ---
 
