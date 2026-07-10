@@ -95,7 +95,7 @@ and sends them over UART to the LoRa module, which transmits at **433 MHz**. The
 4. Flash `src/TankNode/TankNode.ino` to each tank's ESP32 — update `TANK_ID` for each node.
 5. Flash `src/CentralReceiver/CentralReceiver.ino` to the gateway ESP32 — update your WiFi credentials and ThingSpeak Write API Key.
 6. Wire the sensors and LoRa module per the pin definitions at the top of each `.ino` file.
-7. (Optional) Set up a **Blynk** project and link the ThingSpeak fields to your dashboard widgets for gauges, graphs, and pump control notifications.
+   Set up a **Blynk** project and link the ThingSpeak fields to your dashboard widgets for gauges, graphs, and pump control notifications.
 
 ---
 
