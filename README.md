@@ -84,22 +84,6 @@ and sends them over UART to the LoRa module, which transmits at **433 MHz**. The
 
 ---
 
-## Repository Structure
-
-```
-LoRa-Multi-Tank-Water-Management/
-├── README.md
-├── src/
-│   ├── TankNode/
-│   │   └── TankNode.ino          # Runs on each tank's ESP32 (sensor + LoRa TX + pump relay)
-│   └── CentralReceiver/
-│       └── CentralReceiver.ino   # Runs on the gateway ESP32 (LoRa RX + WiFi + ThingSpeak upload)
-└── docs/
-|    └── ppt
-|__Block diagram           
-|
-|__Result images
-
 ## Software Setup
 
 1. Install **Arduino IDE** (or PlatformIO).
@@ -115,38 +99,5 @@ LoRa-Multi-Tank-Water-Management/
 
 ---
 
-## Default Pin Mapping (Tank Node — ESP32)
 
-| Signal | GPIO Pin |
-|---|---|
-| HC-SR04 Trig | 5 |
-| HC-SR04 Echo | 18 |
-| TDS Sensor (Analog) | 34 |
-| Relay (Pump) | 26 |
-| LoRa SS (NSS) | 15 |
-| LoRa RST | 14 |
-| LoRa DIO0 | 2 |
-| LoRa SCK/MISO/MOSI | 18/19/23 (default VSPI) |
 
-> Adjust pins in the `#define` section of each sketch to match your actual wiring.
-
----
-
-## Results Summary (from the reference paper)
-
-- Reliable packet delivery over LoRa with fast processing of sensor readings.
-- Water level bar-graph analysis across two tanks showed synchronized, consistent usage patterns.
-- TDS bar-graph analysis flagged critical thresholds indicating potential contamination.
-- The Blynk + ThingSpeak combination enabled real-time tracking and automated pump responses with minimal user effort.
-
----
-
-## 📚 Reference
-
-B. Padmavathi, L. Sathya, G. K. Sathya Narayanan, B. Sanjana, A. Rasool, *"LoRa Powered Water Management System for Real Time Monitoring and Control in Smart Cities,"* Dept. of ECE, SRM Institute of Science and Technology, Ramapuram Campus, Chennai.
-
----
-
-## 📝 License
-
-This project is released under the MIT License — feel free to use, modify, and distribute with attribution.
